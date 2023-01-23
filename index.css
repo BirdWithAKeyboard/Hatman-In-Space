@@ -12,4 +12,7 @@ body {
    width: 100vw;
    border-color: #c4c4c4;
    position: fixed;
+   background: white;
+   top: 0;
+   left: 0;
 }
