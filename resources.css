@@ -1,5 +1,5 @@
 html {    
-    background: url('Needle_Galaxy_4565.jpeg') no-repeat center fixed;     
+    background: url('images/Needle_Galaxy_4565.jpeg') no-repeat center fixed;     
     background-size: cover;
 }
 
@@ -7,7 +7,7 @@ body {
     background-color: black;
     font-family: Arial, sans-serif;
     text-align: center;
-    background-image: url('Needle_Galaxy_4565.jpeg');
+    background-image: url('images/Needle_Galaxy_4565.jpeg');
     background-size: 100% 100%;
     background-attachment: fixed;
     background-position: center;
