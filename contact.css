@@ -112,7 +112,7 @@ input[type=text], select, textarea {
   resize: vertical;
 }
 
-input[type=submit] {
+.submit {
   background-color: #ffffff;
   color: rgb(0, 0, 0);
   padding: 15px 25px;
@@ -125,7 +125,7 @@ input[type=submit] {
   font-weight: bold;
 }
 
-input[type=submit]:hover {
+.submit:hover {
   background-color: #3c3d3c;
   color: white;
 }
