@@ -18,6 +18,20 @@ body {
    left: 0;
 }
 
+.topbanner a {
+  float: right;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topbanner a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
 .logo {
    background: black;
    width: 20px;
