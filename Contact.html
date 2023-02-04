@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="resources.css"></link>
+  <link rel="stylesheet" href="Contact.css"></link>
 <title>Hatman Space Program</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,9 +16,29 @@
     </div>
     </div>
     <br></br>
-      <h1 class="bg-text">Resources</h1>
+      <h1 class="bg-text">Contact Us</h1>
       <div class="kms">
-        <h1 class="bg-text">Documentation</h1>
+        <h1 class="bg-text2">Contact Form</h1>
+        <div class="container">
+          <form>
+            <label for="fname" class="yse">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        
+            <label for="lname" class="yse">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        
+            <label for="country" class="yse">Country</label>
+            <select id="country" name="country">
+              <option value="australia">Australia</option>
+              <option value="canada">Canada</option>
+              <option value="usa">USA</option>
+            </select>
+        
+            <label for="subject" class="yse">Question</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        
+            <input type="submit" value="Submit">
+          </form>
       </div>
   </body>
 </html>
