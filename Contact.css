@@ -1,5 +1,5 @@
 html {    
-    background: url('images/Needle_Galaxy_4565.jpeg') no-repeat center fixed;     
+    background: url('images/ESO_-_Milky_Way.jpg') no-repeat center fixed;     
     background-size: cover;
 }
 
@@ -7,7 +7,7 @@ body {
     background-color: black;
     font-family: Arial, sans-serif;
     text-align: center;
-    background-image: url('images/Needle_Galaxy_4565.jpeg');
+    background-image: url('images/ESO_-_Milky_Way.jpg');
     background-size: 100% 100%;
     background-attachment: fixed;
     background-position: center;
@@ -97,5 +97,68 @@ body {
     text-align: center;
     font-family: 'Share Tech Mono', monospace;
     font-size: 10vh;
+    
+}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 15px 25px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+input[type=submit]:hover {
+  background-color: #3c3d3c;
+  color: white;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: 
+  #000000;
+  padding: 17px;
+  transform: translate(0%, 20%);
+}
+.yse{
+    color: white;
+    float: left;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bold;
+}
+.ne{
+    width: 100px;
+}
+
+.bg-text2 { 
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 10vh;
+    transform: translate(0%, -110%);
     
 }
