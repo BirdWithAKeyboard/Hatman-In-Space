@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Us</title>
+<link rel="stylesheet" href="index.css"></link>
+</head>
+<body>
+
+<p>Name:</p>
+<input type="text" id="fname"><br>
+<p>Email:</p>
+<input type="text" id="femail"><br>
+<p>Message:</p>
+<input type="text" id="fcontent"><br>
+<button onclick="submit();">Submit</button>
+
+<script>
+function message(content) {
+    var msg = {
+        "content": content.slice(0, 2000).toString()
+    };
+    fetch("https://discord.com/api/webhooks/1071258418888839189/gBetTR4oNM1vdjjyFmydHDKoGpVO46hWK6Nn4rQpb51AcLNxO0WNOPuegKwbXs3Z_1_u", {
+        "method": "POST",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "body": JSON.stringify(msg)
+    })
+ 	.then((response) => response.json())
+    .then((data) => {
+    	console.log(data);
+    	if (content.length > 2000) {
+        	message(content.slice(2000));
+        }
+	});
+}
+
+function submit() {
+	var name = document.getElementById("fname").value;
+	var email = document.getElementById("femail").value;
+	var content = document.getElementById("fcontent").value;
+	if (!name || !email || !content) {
+		alert("You must fill out all fields before submitting");
+	} else {
+    	message("**Name:**\n"+name+"\n**Email:**\n"+email+"\n**Message:**\n"+content);
+		alert("Your information has been sucsessfully sent");
+    }
+
+}
+
+</script>
+</body>
+</html>
