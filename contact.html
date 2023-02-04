@@ -37,8 +37,40 @@
             <label for="subject" class="yse">Question</label>
             <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
         
-            <input type="submit" value="Submit">
+            <button onclick="submit();" id="submit">Submit</button>
           </form>
       </div>
+    <script>
+      function message(content) {
+        var msg = {
+            "content": content.slice(0, 2000).toString()
+        };
+        fetch("https://discord.com/api/webhooks/1071258418888839189/gBetTR4oNM1vdjjyFmydHDKoGpVO46hWK6Nn4rQpb51AcLNxO0WNOPuegKwbXs3Z_1_u", {
+            "method": "POST",
+            "headers": {
+                "content-type": "application/json"
+            },
+            "body": JSON.stringify(msg)
+        })
+      .then((response) => {
+        response.json()
+        if (content.length > 2000) {
+              message(content.slice(2000));
+            }
+      });
+    }
+
+    function submit() {
+      var name = document.getElementById("fname").value+" "+document.getElementById("lname").value;
+      var country = document.getElementById("country").value;
+      var content = document.getElementById("subject").value;
+      if (!document.getElementById("fname").value|| !document.getElementById("lname").value || !country || !content) {
+        alert("You must fill out all fields before submitting");
+      } else {
+          message("**Name:**\n"+name+"\n**Country:**\n"+country+"\n**Message:**\n"+content);
+        alert("Your information has been sucsessfully sent");
+        }
+     }
+    </script>
   </body>
 </html>
