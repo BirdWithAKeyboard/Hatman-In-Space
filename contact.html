@@ -39,14 +39,15 @@
             <button onclick="submit();" class="submit">Submit</button>
       </div>
     <script>
+      function b64(str) {
+          return decodeURIComponent(escape(window.atob(str)));
+        }
       function message(content) {
         var msg = {
             "content": content.slice(0, 2000).toString()
         };
-        function b64(str) {
-          return decodeURIComponent(escape(window.atob(str)));
-        }
-        fetch(b64("aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTA3Mjc1MzExMzc3OTQyMTE4NC9oVmhhbldneGo4VE1uelhjc2oyVDFRc0FoTnZaMVhKTlFBTkk0NVRQR2FJYmRnLUFhRU9zZlJGNkF4WHQzS0ZndUY4Tw=="), {
+        var url = b64("aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTA3Mjc1MzExMzc3OTQyMTE4NC9oVmhhbldneGo4VE1uelhjc2oyVDFRc0FoTnZaMVhKTlFBTkk0NVRQR2FJYmRnLUFhRU9zZlJGNkF4WHQzS0ZndUY4Tw==");
+        fetch(url, {
             "method": "POST",
             "headers": {
                 "content-type": "application/json"
